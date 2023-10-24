@@ -1,0 +1,58 @@
+.faq{
+  padding-bottom: res(50, 100);
+  padding-top: res(50, 100);
+  &__title{
+    font-size: res(14, 16);
+    font-weight: 700;
+    background: none;
+    padding: 0;
+    border: none;
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding-top: res(10, 15);
+    padding-bottom: res(10, 15);
+    position: relative;
+    padding-left: res(10, 15);
+    padding-right: res(10, 15);
+    i{
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: .5s ease;
+      transform-origin: left top;
+    }
+  }
+  &__text{
+    font-size: res(13, 16);
+    color: rgba(18, 18, 18, .75);
+    max-height: 0px;
+    transition: .5s ease-out;
+    overflow: hidden;
+    opacity: 0;
+    padding-left: res(10, 15);
+    padding-right: res(10, 15);
+  }
+  &__item{
+    border-style: solid;
+    border-width: 0 0 1px;
+    border-color: #fff #fff #9b9b9b;
+    color: #000;
+    background: #fff;
+    &.active{
+      .faq__title{
+        i{
+          transform: rotate(90deg) translateY(-50%);
+        }
+      }
+      .faq__text{
+        padding-top: 5px;
+        padding-bottom: 20px;
+        max-height: 1000px;
+        transition: .5s ease-in;
+        opacity: 1;
+      }
+    }
+  }
+}

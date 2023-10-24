@@ -1,0 +1,139 @@
+.products{
+  background-color: #f0f0f0;
+  padding-top: res(30, 65);
+  padding-bottom: res(30, 65);
+  &__row{
+    @media(min-width:768px){
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+  &__item{
+    background: #fff;
+    padding: 9px 24px;
+    border-radius: 25px;
+    text-align: center;
+    position: relative;
+    @media(min-width:768px){
+      width: calc(100% / 3 - 30px);
+    }
+    @media(max-width:767px){
+      &:not(:first-child){
+        margin-top: 30px;
+      }
+    }
+    &-18, &-20{
+      &:before{
+        background: #c73d23;
+        color: #fff;
+        font-size: 16px;
+        z-index: 2;
+        position: absolute;
+        right: 25px;
+        padding: 10px 15px;
+        font-weight: 700;
+        border-radius: 16px;
+      }
+    }
+    &-18{
+      border: 3px solid #000;
+      &:before{
+        content: "Save 50%";
+        top: 75px;
+      }
+    }
+    &-20{
+      &:before{
+        content: "Save 70%";
+        top: 50px;
+      }
+    }
+  }
+  h4{
+    font-size: res(15, 18);
+    font-weight: 800;
+    line-height: 1.5;
+    color: #1a1919;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  img{
+    display: block;
+    width: 100%;
+  }
+  &__price{
+    font-size: res(26, 36);
+    font-weight: 800;
+    line-height: 1.5;
+    color: #1a1919;
+  }
+  &__description{
+    color: #111213;
+    font-size: res(15, 18);
+    font-weight: 400;
+    text-align: left;
+    margin: 15px 0;
+    li{
+      &:not(:first-child){
+        margin-top: 10px;
+      }
+      &:before {
+        content: "✓";
+        font-size: 16px;
+        color: #377e62;
+        margin-right: 5px;
+      }
+    }
+  }
+  &__btn{
+    position: relative;
+    border-radius: 10px;
+    font-size: 17px;
+    width: 100%;
+    background-color: #7ed321;
+    font-weight: 700;
+    line-height: 1.5em;
+    color: #fff;
+    margin-top: 15px;
+    border: none;
+    padding: 14.5px 20px;
+    vertical-align: bottom;
+    margin-bottom: 30px;
+    transition: .5s ease;
+    &:after{
+      content:"Added to cart";
+      position: absolute;
+      left: 0; right: 0;
+      top: 100%;
+      text-align: center;
+      color: #7ed321;
+      font-size: 11px;
+      opacity: 0;
+      visibility: hidden;
+      transition: .5s ease;
+    }
+    &.added{
+      &:after{
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    @media(min-width:768px){
+      &:hover{
+        transform: scale(1.05);
+        background: #f5a304;
+      }
+    }
+    @media(max-width:767px){
+      &:active{
+        transform: scale(1.05);
+        background: #f5a304;
+      }
+    }
+    &:disabled{
+      opacity: .7;
+      pointer-events: none;
+    }
+  }
+}

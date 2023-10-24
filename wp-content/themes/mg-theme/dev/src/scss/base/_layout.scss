@@ -1,0 +1,107 @@
+body{
+  padding-top: 136px;
+}
+
+.container{
+  width: 1200px;
+  max-width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img, svg{
+  max-width: 100%;
+  height: auto;
+}
+
+.page-id-41{
+  .page__content{
+    color: rgba(18, 18, 18, 0.75);
+    p{
+      font-size: 16px;
+      text-align: center;
+    }
+    a{
+      color: rgba(18, 18, 18, 0.75);
+    }
+  }
+  .page-title{
+    text-align: center;
+    margin-bottom: res(30, 60);
+  }
+  .wpcf7{
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    p{
+      text-align: left;
+    }
+    .wpcf7-not-valid-tip {
+      font-size: 11px;
+    }
+  }
+  input, textarea{
+    display: block;
+    width: 100%;
+    border: 1px solid rgba(18, 18, 18, 0.75);
+    color: rgba(18, 18, 18, 0.75);
+    font-size: 16px;
+    padding: 0 15px;
+    height: 50px;
+    border-radius: 2px;
+    &[type="submit"]{
+      width: calc(100% - 100px);
+      border-radius: 6px;
+      font-size: 18px;
+      width: 100%;
+      background-color: #f5a304;
+      font-weight: 700;
+      line-height: 1.5em;
+      color: #1a1919;
+      border: none;
+      padding: 14.5px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: .5s ease;
+      height: 60px;
+      width: 150px;
+      display: inline-block;
+      @media(min-width:768px){
+        &:hover{
+          transform: scale(1.02);
+          background: #7ed321;
+        }
+      }
+      @media(max-width:767px){
+        &:active{
+          transform: scale(1.02);
+          background: #7ed321;
+        }
+      }
+    }
+  }
+  textarea{
+    min-height: 100px;
+    padding: 15px;
+    resize: none;
+  }
+  .field{
+    display: block;
+    width: 100%;
+    &:not(:last-child){
+      margin-bottom: 15px;
+    }
+    &__half{
+      width: calc(50% - 10px);
+    }
+    &__row{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: res(30, 60);
+    }
+  }
+}

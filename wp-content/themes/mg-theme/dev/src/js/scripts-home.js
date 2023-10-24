@@ -1,0 +1,2 @@
+//= partials/tiny-slider.js
+

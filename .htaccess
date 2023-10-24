@@ -1,0 +1,31 @@
+# BEGIN WordPress
+# The directives (lines) between "BEGIN WordPress" and "END WordPress" are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+
+# BEGIN Images to WebP
+<IfModule mod_mime.c>
+AddType image/webp .webp
+</IfModule>
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTP_ACCEPT} image/webp
+RewriteCond %{REQUEST_FILENAME} "/"
+RewriteCond %{REQUEST_FILENAME} "\.(jpg|jpeg|gif|png)$"
+RewriteCond %{REQUEST_FILENAME}\.webp -f
+RewriteCond %{QUERY_STRING} !no_webp
+RewriteRule ^(.+)$ $1\.webp [NC,T=image/webp,E=webp,L]
+</IfModule>
+# END Images to WebP
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /selfiefeet/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /selfiefeet/index.php [L]
+</IfModule>
+
+# END WordPress

@@ -1,0 +1,9 @@
+form{
+  input, select, textarea{
+    width: 100%;
+    transition: .5s ease;
+    &.err{
+      box-shadow: 0 0 16px red inset;
+    }
+  }
+}

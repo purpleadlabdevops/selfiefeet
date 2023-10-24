@@ -1,0 +1,38 @@
+.features{
+  padding-top: res(50, 100);
+  padding-bottom: res(50, 100);
+  h4{
+    color: #1a1919;
+    text-align: center;
+    padding: 15px;
+    font-size: res(17, 24);
+    width: 100%;
+    @media(min-width:768px){
+      width: calc(50% - 30px);
+    }
+  }
+  img{
+    display: block;
+    height: auto;
+    width: 100%;
+    @media(min-width:768px){
+      width: calc(50% - 30px);
+    }
+  }
+  &__item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    &:nth-child(2n){
+      h4{
+        @media(min-width:768px){
+          order: 2;
+        }
+      }
+    }
+    &:not(:first-child){
+      margin-top: res(25, 30);
+    }
+  }
+}
