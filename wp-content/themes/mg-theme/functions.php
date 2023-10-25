@@ -48,6 +48,7 @@ function front_variables(){
 			'ajax' => admin_url('admin-ajax.php'),
 			'frontPage' => home_url(),
 			'isFrontPage' => is_front_page(),
+			'checkout' => wc_get_checkout_url(),
 		)
 	);
 }

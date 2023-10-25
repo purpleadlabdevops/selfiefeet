@@ -15,11 +15,12 @@
 			if (this.status >= 200 && this.status < 400) {
 				const result = JSON.parse(this.response)
 				document.querySelector('.header__cart span').innerHTML = result.count
-				console.log(this.response);
-				el.classList.add('added')
 				setTimeout(()=>{
-				  el.classList.remove('added')
-				}, 1000)
+				  el.innerHTML = 'Thank you!'
+				  setTimeout(()=>{
+					  window.location.href = data.checkout;
+					}, 500)
+				}, 500)
 			} else {
 				alert('Something went wrong, please reload page and try againe!')
 			}
@@ -37,6 +38,7 @@
 	addToCart.forEach(cartButton => {
 		cartButton.addEventListener('click', e => {
 		  e.preventDefault()
+		  e.target.innerHTML = 'Additting...'
 		  addToCartFunction(e.target, e.target.dataset.id, e.target.dataset.qty)
 		})
 	})
@@ -61,7 +63,11 @@
 				document.getElementById('addToCart').classList.add('added')
 				setTimeout(()=>{
 				  document.getElementById('addToCart').classList.remove('added')
-				}, 1000)
+				  document.querySelector('.product__form button span').innerHTML = 'Thank you!'
+				  setTimeout(()=>{
+					  window.location.href = data.checkout;
+					}, 500)
+				}, 500)
 			} else {
 				alert('Something went wrong, please reload page and try againe!')
 			}
@@ -77,9 +83,7 @@
 	document.getElementById('addToCart').addEventListener('submit', e => {
 	  e.preventDefault()
 	  document.querySelector('.product__loader').classList.add('active')
-	  console.log('---------------------------------------------------');
-	  console.log('---------------------------------------------------');
-	  console.log(e.target.dataset.id, document.getElementById('productQty').value)
+	  document.querySelector('.product__form button span').innerHTML = 'Additting...'
 	  addToCartFormFunction(e.target.dataset.id, document.getElementById('productQty').value)
 	})
 
