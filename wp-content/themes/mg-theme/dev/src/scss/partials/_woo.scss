@@ -103,6 +103,9 @@ body.woocommerce{
         justify-content: flex-start;
         align-items: center;
       }
+      &.place-order{
+        padding: 30px 15px;
+      }
       label{
         line-height: 1.2;
         font-size: 12px;
