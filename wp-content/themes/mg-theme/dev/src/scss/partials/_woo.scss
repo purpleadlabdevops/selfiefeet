@@ -1,7 +1,11 @@
+body.woocommerce{
+  &-cart, &-checkout{
+    padding-top: 101px;
+  }
+}
 .woocommerce{
   &-cart, &-checkout{
     overflow-x: hidden;
-    padding-top: 101px;
     .header{
       top: 0 !important;
       position: fixed !important;
@@ -64,11 +68,24 @@
   }
   form{
     .form-row{
+      padding: 0;
+      margin: 0 0 6px;
+      &-first, &-last{
+        width: calc(50% - 15px);
+      }
+      &.address-field{
+        @media(min-width:768px){
+          width: calc(70% - 15px);
+          & + .form-row{
+            width: calc(30% - 15px);
+          }
+        }
+      }
       label{
         line-height: 1.2;
-        font-size: 14px;
+        font-size: 12px;
         display: block;
-        margin-bottom: 4px;
+        margin-bottom: 2px;
       }
       input, select, textarea{
         display: block;
