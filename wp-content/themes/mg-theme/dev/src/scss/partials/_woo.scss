@@ -77,6 +77,12 @@ body.woocommerce{
   #add_payment_method #payment div.form-row, .woocommerce-cart #payment div.form-row, .woocommerce-checkout #payment div.form-row{
     padding: 0;
     margin: 0 0 6px;
+    &.place-order{
+      padding: 30px 15px;
+    }
+    button[type="submit"]{
+      margin-top: 30px;
+    }
   }
   form{
     .form-row{
@@ -102,9 +108,6 @@ body.woocommerce{
         display: flex;
         justify-content: flex-start;
         align-items: center;
-      }
-      &.place-order{
-        padding: 30px 15px;
       }
       label{
         line-height: 1.2;
