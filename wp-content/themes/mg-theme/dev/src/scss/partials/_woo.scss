@@ -24,6 +24,12 @@ body.woocommerce{
         margin-bottom: 30px;
         font-size: 20px;
       }
+      .woocommerce-customer-details{
+        address{
+          display: inline-block;
+          width: auto;
+        }
+      }
     }
     .sale{
       display: none;
