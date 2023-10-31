@@ -79,7 +79,7 @@ body.woocommerce{
           float: left;
           & + .form-row{
             width: calc(30% - 15px);
-            float: left;
+            float: right;
           }
         }
       }
