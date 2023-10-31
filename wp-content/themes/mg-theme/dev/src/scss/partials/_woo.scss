@@ -69,7 +69,7 @@ body.woocommerce{
   .wc-stripe-elements-field, .wc-stripe-iban-element-field {
     border: 1px solid #cfc8d8;
     margin: 0;
-    padding: 10px 0;
+    padding: 10px;
     background: #fff;
     outline: 0;
     border-radius: 4px;
@@ -98,6 +98,11 @@ body.woocommerce{
           }
         }
       }
+      &.woocommerce-SavedPaymentMethods-saveNew.woocommerce-validated {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
       label{
         line-height: 1.2;
         font-size: 12px;
@@ -113,11 +118,6 @@ body.woocommerce{
         padding: 0 15px;
         background: rgba(207,200,216,0.3);
         border-radius: 4px;
-        &#wc-stripe-new-payment-method {
-          display: inline-block;
-          float: left;
-          height: auto;
-        }
       }
       textarea{
         min-height: 150px;
