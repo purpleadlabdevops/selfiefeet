@@ -17,10 +17,10 @@ body.woocommerce{
       }
     }
     &.page-id-9{
-      .page-title, &.woocommerce-notice{
+      .page-title, .woocommerce-notice{
         text-align: center;
       }
-      &.woocommerce-notice{
+      .woocommerce-notice{
         margin-bottom: 15px;
       }
     }
