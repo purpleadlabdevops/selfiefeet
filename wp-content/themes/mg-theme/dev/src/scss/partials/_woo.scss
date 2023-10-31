@@ -73,7 +73,7 @@ body.woocommerce{
       &-first, &-last{
         width: calc(50% - 15px);
       }
-      &.address-field{
+      &#billing_country_field{
         @media(min-width:768px){
           width: calc(70% - 15px);
           & + .form-row{
