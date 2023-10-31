@@ -1,6 +1,11 @@
 .woocommerce{
   &-cart, &-checkout{
     overflow-x: hidden;
+    padding-top: 101px;
+    .header{
+      top: 0 !important;
+      position: fixed !important;
+    }
     table.cart{
       img{
         width: 100px;
