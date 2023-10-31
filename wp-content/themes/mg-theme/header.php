@@ -12,7 +12,7 @@
 
 		<title><?php wp_title( '|', true, 'right' ); echo get_bloginfo('name'); ?></title>
 
-		<link rel="shortcut icon" type="image/png" href="<?php the_field('favicon', 'option'); ?>" />
+		<link rel="shortcut icon" type="image/png" href="<?php echo ROOT; ?>/favicon.png" />
 
 		<meta name="format-detection" content="telephone=no">
 		<meta name="robots" content="nofollow" />
