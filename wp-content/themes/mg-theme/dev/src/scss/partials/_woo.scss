@@ -16,6 +16,14 @@ body.woocommerce{
         height: auto;
       }
     }
+    &#page-id-9{
+      .page-title, &.woocommerce-notice{
+        text-align: center;
+      }
+      &.woocommerce-notice{
+        margin-bottom: 15px;
+      }
+    }
     .sale{
       display: none;
     }
